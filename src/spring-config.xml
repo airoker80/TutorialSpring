@@ -12,4 +12,16 @@
           destroy-method="destroy"/>
 
     <bean class="com.sameer.tutorialSpring.BeanPostProcessor.InitiLifeCycle"/>
+
+    <bean id="spellChecker" class="com.sameer.tutorialSpring.DI.ConstructorDI.SpellChecker"></bean>
+
+    <bean id="textEditor" class="com.sameer.tutorialSpring.DI.ConstructorDI.TextEditor">
+        <constructor-arg ref="spellChecker"/>
+    </bean>
+
+    <bean id="checker" class="com.sameer.tutorialSpring.DI.SetterDI.SpellChecker"/>
+
+    <bean id="editor" class="com.sameer.tutorialSpring.DI.SetterDI.TextEditor">
+        <property name="spellChecker" ref="checker"/>
+    </bean>
 </beans>

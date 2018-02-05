@@ -16,7 +16,7 @@ public class InitiLifeCycle implements BeanPostProcessor {
     @Nullable
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-        System.out.println("The bean is "+beanName + " before intialization");
+//        System.out.println("The bean is "+beanName + " before intialization");
 
         return null;
     }
@@ -24,7 +24,7 @@ public class InitiLifeCycle implements BeanPostProcessor {
     @Nullable
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-        System.out.println("The bean is " + beanName + " after initialization");
+//        System.out.println("The bean is " + beanName + " after initialization");
         return null;
     }
 }
